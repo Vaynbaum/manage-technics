@@ -7,7 +7,8 @@ The application allows you to manage construction equipment.
 ![background-system](https://user-images.githubusercontent.com/78900834/180208701-8b918016-af8f-40ab-921a-7c82fd865d16.png)
 
 # About the app
-
+By creating a personal account or logging in, the client part of the solution provides an opportunity to monitor the available units of equipment during construction. The user can add equipment, which will be able to monitor and control. Save the current state of the equipment for later viewing in the archive.
+## Front-end 
 The user must `log in` to the application or `register`. 
 
 <img width="274" alt="image" src="https://user-images.githubusercontent.com/78900834/180209313-7f1e8b99-e7c0-4b71-be3d-734dd97b0e5c.png">
@@ -41,3 +42,28 @@ By choosing one or another section, you can view the machines filtered by operat
 It is also possible to `save the current moment` of the distribution of equipment. And viewing it in the `report archive`.
 
 <img width="236" alt="image" src="https://user-images.githubusercontent.com/78900834/180210880-2d648e22-dbfa-47f6-82e3-c853b64469f2.png">
+
+## Backend
+When contacting via requests, information about the status of work and coordinates of the unit of equipment is received in real time.
+
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/78900834/180219253-cd22724e-8e53-444c-8377-ebef0b23543c.png">
+
+# Technologies in the project
+Frontend-part of the application is written using the Angular framework.
+
+Backend-part of the application, which simulates data from construction machinery, is written using the Express framework.
+
+# How to start
+After downloading the project, you need to install the dependencies In the folders for frontend and for backend
+
+>npm install
+
+To run frontend, you need to write the command
+
+>npm run dev
+
+To run backend, you need to write the command
+
+>npm run iot
+
+Open your browser at http://localhost:4200/
