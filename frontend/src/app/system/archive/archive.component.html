@@ -1,0 +1,21 @@
+<div class="page">
+  <!-- <div class="chart">
+    <app-chart [chart]="chart" > </app-chart>
+  </div> -->
+
+  <div class="block">
+    <ng-container *ngFor="let row of reportRows; first as isFirst">
+      <div class="row" *ngIf="isFirst">
+        <div class="title">Архив</div>
+        <app-report [archive]="true" [row]="row"></app-report>
+      </div>
+    </ng-container>
+
+    <ng-container *ngFor="let row of reportRows; first as isFirst">
+      <div class="row" *ngIf="!isFirst">
+        <app-report [archive]="true" [row]="row"></app-report>
+      </div>
+    </ng-container>
+
+  </div>
+</div>

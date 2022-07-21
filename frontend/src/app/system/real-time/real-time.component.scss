@@ -1,0 +1,40 @@
+@import "../../../assets/styles/page.scss";
+@import "../../../styles.scss";
+@import "../../../assets/styles/title.scss";
+@import "../../../assets/styles/separator.scss";
+
+.page {
+  justify-content: center;
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: $gap;
+
+    background-color: $colorWhite;
+    border-radius: $borderRadius;
+    padding: $padding;
+    app-report {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 320px) {
+  .block {
+    width: 95%;
+  }
+}
+
+@media (min-width: 425px) {
+  .block {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .block {
+    width: 70%;
+  }
+}

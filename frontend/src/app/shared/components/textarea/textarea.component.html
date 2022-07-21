@@ -1,0 +1,24 @@
+<div
+  class="form-group"
+  [ngClass]="{
+    'has-error': formConrol?.invalid && formConrol?.touched
+  }"
+>
+  <div class="input-group">
+    <label *ngIf="label">{{ label }}:</label>
+    <input
+      class="form-control"
+      [value]="value"
+      [type]="type"
+      [placeholder]="placeholder"
+      (input)="onInput($event)"
+      (blur)="onTouched()"
+    />
+  </div>
+  <div
+    class="form-help-text"
+    *ngIf="formConrol?.invalid && formConrol?.touched"
+  >
+    <span>{{ messageErorFunc() }}</span>
+  </div>
+</div>

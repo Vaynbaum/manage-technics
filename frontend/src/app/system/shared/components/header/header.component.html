@@ -1,0 +1,38 @@
+<header>
+  <div class="block-top">
+    <a [routerLink]="['/system']">
+      <div class="logo">ISUVision</div>
+    </a>
+
+    <div class="links">
+      <ng-container *ngFor="let link of links">
+        <app-link [text]="link.text" [link]="link.link" [reverse]="false" [queryParams]="link.queryParams"></app-link>
+      </ng-container>
+    </div>
+    <div appDirectiveDropDown><div class="account" >
+      <app-info-profile [fullname]="user.name" [url]="user.url"></app-info-profile>
+    </div>
+    <div class="dropdown">
+      <ng-container *ngFor="let link of profileLinks">
+        <app-link
+          [text]="link.text"
+          [link]="link.link"
+          [reverse]="true"
+        ></app-link
+      ></ng-container>
+
+      <!-- Exit -->
+      <app-link
+        [text]="exit.text"
+        [reverse]="true"
+        (click)="logout()"
+      ></app-link>
+    </div></div>
+
+  </div>
+  <div class="block-bottom">
+    <ng-container *ngFor="let link of links">
+      <app-link [text]="link.text" [link]="link.link" [reverse]="false" [queryParams]="link.queryParams"></app-link>
+    </ng-container>
+  </div>
+</header>

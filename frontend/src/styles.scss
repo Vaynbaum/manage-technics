@@ -1,0 +1,25 @@
+$colorWhite: #fff;
+$primaryColor: #5111b2;
+$widthProfileImg: 30px;
+$borderRadius: 5px;
+$padding: 10px;
+$gap: 10px;
+$paddingBtn: 5px;
+$heightHeader: 50px;
+$heightFooter: 150px;$secondsTransition: 300ms;
+@font-face {
+  font-family: "Segoe UI Regular";
+  src: url("assets/fonts/SegoeUI.eot");
+  src: url("assets/fonts/SegoeUI.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/SegoeUI.woff") format("woff"),
+    url("assets/fonts/SegoeUI.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI Regular";
+}

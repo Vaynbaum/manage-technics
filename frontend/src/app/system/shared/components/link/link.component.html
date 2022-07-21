@@ -1,0 +1,10 @@
+<div (click)="onClick()" [ngClass]="{
+    btn_link: !reverse && !hover,
+    'btn_link-reverse': reverse && !hover,
+    'btn_link-hover': !reverse && hover,
+    'btn_link-hover_reverse': reverse && hover
+  }" (mouseenter)="onHover()" (mouseleave)="onNonHover()">
+  <a>
+    {{ text }}
+  </a>
+</div>

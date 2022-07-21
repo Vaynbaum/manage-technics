@@ -1,0 +1,23 @@
+@import "../../../../../styles.scss";
+
+.profile {
+  // font-size: $fontSizeButton;
+  color: $colorWhite;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: $gap;
+  img {
+    border-radius: 50%;
+    width: $widthProfileImg;
+    height: $widthProfileImg;
+  }
+  .profile-nameDate {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+}
+.profile:hover {
+  cursor: pointer;
+}

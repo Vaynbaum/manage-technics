@@ -1,0 +1,54 @@
+@import "../../../assets/styles/page.scss";
+
+@import "../../../styles.scss";
+@import "../../../assets/styles/title.scss";
+@import "../../../assets/styles/separator.scss";
+.page,
+.block,
+.chart,
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: $gap;
+}
+
+.row,
+.chart {
+  width: 100%;
+  background-color: $colorWhite;
+  border-radius: $borderRadius;
+}
+.page {
+  .block {
+    .row {
+      padding: $padding;
+      app-report {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) {
+  .block,
+  .chart {
+    width: 95%;
+    row-gap: $gap;
+  }
+}
+
+@media (min-width: 425px) {
+  .block,
+  .chart {
+    width: 90%;
+    row-gap: calc(2 * #{$gap});
+  }
+}
+
+@media (min-width: 768px) {
+  .block,
+  .chart {
+    width: 70%;
+  }
+}

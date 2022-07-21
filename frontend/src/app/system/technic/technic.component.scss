@@ -1,0 +1,50 @@
+@import "../../../assets/styles/page.scss";
+@import "../../../styles.scss";
+@import "../../../assets/styles/title.scss";
+@import "../../../assets/styles/separator.scss";
+@import "../../../assets/styles/button.scss";
+.page {
+  .btn {
+    transition: all 300ms ease;
+    background: $colorBtnDisabled;
+  }
+  .btn:hover {
+    background: $colorBtn;
+  }
+  justify-content: center;
+  .block,
+  .coordinates,
+  .row {
+    display: flex;
+    flex-direction: column;
+    row-gap: $gap;
+  }
+  .block {
+    align-items: center;
+    background-color: $colorWhite;
+    border-radius: $borderRadius;
+    padding: $padding;
+
+    .row {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 320px) {
+  .block {
+    width: 95%;
+  }
+}
+
+@media (min-width: 425px) {
+  .block {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .block {
+    width: 70%;
+  }
+}

@@ -1,0 +1,27 @@
+<div class="page">
+  <div class="block">
+    <div class="title">Единицы техники</div>
+    <div class="separator"></div>
+    <div class="titles">
+      <div class="title-name text" *ngFor="let name of titleNames">{{name}}</div>
+    </div>
+    <div class="technic" *ngFor="let technic of technics" (click)="goto(technic.id)">
+      <div class="item text">
+        <div>
+          <a>
+            <img [src]="joinerURL(technic.type)" alt="">
+          </a>
+        </div>
+        <div>{{technic.number}}</div>
+
+        <div>{{technic.status}}</div>
+      </div>
+      <div class="separator"></div>
+    </div>
+
+    <div class="add-technics">
+      <button (click)="goToAdd()" type="submit" class="btn text">Добавить технику</button>
+      <button (click)="saveState()" type="submit" class="btn text">Сохранить состояние</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+@import "../../assets/styles/form.scss";
+@import "../../assets/styles/title.scss";
+@import "../../assets/styles/button.scss";
+$colorLinkText: #96a2b2;
+main {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../../assets/images/backgroud.png);
+  background-size: cover;
+}
+.login-links {
+  text-align: center;
+  font-size: 13px;
+  color: $colorLinkText;
+  a {
+    color: $colorLinkText;
+    opacity: 0.8;
+  }
+  a:hover {
+    color: $colorBtn;
+    opacity: 1;
+  }
+}
+.alert-danger,
+.alert-success,
+.alert-warning {
+  width: 100%;
+  padding: 10px;
+  border-radius: $borderRadius;
+  text-align: center;
+}
+.alert-danger {
+  background-color: rgba(180, 91, 91, 0.664);
+  color: #962715;
+}
+
+.alert-success {
+  background-color: rgba(85, 192, 94, 0.664);
+  color: rgba(58, 119, 63, 0.664);
+}
+.alert-warning {
+  background-color: rgba(221, 209, 42, 0.877);
+  color: rgba(131, 89, 41, 0.664);
+}

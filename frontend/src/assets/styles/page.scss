@@ -1,0 +1,16 @@
+@import "../../styles.scss";
+
+.page {
+  display: flex;
+}
+
+@media (min-width: 320px) {
+  .page {
+    padding: $padding 0;
+  }
+}
+@media (min-width: 425px) {
+  .page {
+    padding: calc(2 * #{$padding}) 0;
+  }
+}

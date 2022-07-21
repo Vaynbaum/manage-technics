@@ -1,0 +1,13 @@
+<div class="page">
+  <div class="left text">
+    <div class="name">{{displayUser.fullname}}</div>
+    <div class="separator"></div>
+    <div class="information">
+      <div class="data" *ngFor="let info of displayUser.info">
+        <div class="value">{{info.val}}</div>
+        <div class="key">{{info.str}}</div>
+      </div>
+    </div>
+
+  </div>
+</div>

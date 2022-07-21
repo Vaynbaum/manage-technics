@@ -1,0 +1,340 @@
+{
+  "users": [
+    {
+      "email": "ivanov@mail.ru",
+      "password": "12345678",
+      "lastname": "Иванов",
+      "firstname": "Иван",
+      "post": "Начальник участка",
+      "id": 1
+    },
+    {
+      "email": "smirnov@mail.ru",
+      "password": "12345678",
+      "lastname": "Смирнов",
+      "firstname": "Алексей",
+      "post": "Начальник участка",
+      "id": 2
+    },
+    {
+      "email": "ivanov@yandex.ru",
+      "password": "11111111",
+      "lastname": "Иванов",
+      "firstname": "Иван",
+      "post": "Начальник участка",
+      "id": 3
+    }
+  ],
+  "technics": [
+    {
+      "type": "1.png",
+      "number": "т654се",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "type": "2.png",
+      "number": "р554се",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "type": "1.png",
+      "number": "т675рк",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "type": "2.png",
+      "number": "т472аб",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "type": "2.png",
+      "number": "т462aa",
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "type": "1.png",
+      "number": "А111АА",
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "type": "2.png",
+      "number": "В222ВВ",
+      "userId": 3,
+      "id": 7
+    }
+  ],
+  "archives": [
+    {
+      "year": 2022,
+      "month": 2,
+      "day": 30,
+      "userId": 1,
+      "reports": [
+        {
+          "name": "Свободна",
+          "text": "Свободных в резерве: ",
+          "link": "/system/technics"
+        },
+        {
+          "name": "Работает",
+          "text": "Машин работает на нормальных оборотах: ",
+          "link": "/system/technics"
+        },
+        {
+          "name": "Перегрузка",
+          "text": "Машин работает на предельных оборотах: ",
+          "link": "/system/technics"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "year": 2022,
+      "month": 2,
+      "day": 31,
+      "userId": 1,
+      "reports": [
+        {
+          "name": "Свободна",
+          "text": "Свободных в резерве: ",
+          "link": "/system/technics"
+        },
+        {
+          "name": "Работает",
+          "text": "Машин работает на нормальных оборотах: ",
+          "link": "/system/technics"
+        },
+        {
+          "name": "Перегрузка",
+          "text": "Машин работает на предельных оборотах: ",
+          "link": "/system/technics"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "year": 2022,
+      "month": 2,
+      "day": 4,
+      "userId": 1,
+      "reports": [
+        {
+          "name": "Свободна",
+          "text": "Свободных в резерве: ",
+          "link": "/system/technics"
+        },
+        {
+          "name": "Работает",
+          "text": "Машин работает на нормальных оборотах: ",
+          "link": "/system/technics"
+        },
+        {
+          "name": "Перегрузка",
+          "text": "Машин работает на предельных оборотах: ",
+          "link": "/system/technics"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "year": 2022,
+      "month": 2,
+      "day": 4,
+      "userId": 3,
+      "reports": [
+        {
+          "name": "Свободна",
+          "text": "Свободных в резерве: ",
+          "link": "/system/technics"
+        },
+        {
+          "name": "Работает",
+          "text": "Машин работает на нормальных оборотах: ",
+          "link": "/system/technics"
+        },
+        {
+          "name": "Перегрузка",
+          "text": "Машин работает на предельных оборотах: ",
+          "link": "/system/technics"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "year": 2022,
+      "month": 2,
+      "day": 22,
+      "userId": 1,
+      "reports": [
+        {
+          "name": "Свободна",
+          "text": "Свободных в резерве: ",
+          "link": "/system/technics"
+        },
+        {
+          "name": "Работает",
+          "text": "Машин работает на нормальных оборотах: ",
+          "link": "/system/technics"
+        },
+        {
+          "name": "Перегрузка",
+          "text": "Машин работает на предельных оборотах: ",
+          "link": "/system/technics"
+        }
+      ],
+      "id": 5
+    }
+  ],
+  "archiveToTechnics": [
+    {
+      "status": "Свободна",
+      "coordinateLatitude": 59.25266043151515,
+      "coordinateLongitude": 109.75290020532971,
+      "archiveId": 1,
+      "technicId": 1,
+      "id": 1
+    },
+    {
+      "status": "Свободна",
+      "coordinateLatitude": 59.566628755512795,
+      "coordinateLongitude": 110.90646370101815,
+      "archiveId": 1,
+      "technicId": 2,
+      "id": 2
+    },
+    {
+      "status": "Перегрузка",
+      "coordinateLatitude": 59.14403569481868,
+      "coordinateLongitude": 110.9745319705256,
+      "archiveId": 1,
+      "technicId": 3,
+      "id": 3
+    },
+    {
+      "status": "Свободна",
+      "coordinateLatitude": 59.38732830821266,
+      "coordinateLongitude": 111.1142431506114,
+      "archiveId": 1,
+      "technicId": 4,
+      "id": 4
+    },
+    {
+      "status": "Свободна",
+      "coordinateLatitude": 59.62042690057615,
+      "coordinateLongitude": 110.49784884663895,
+      "archiveId": 2,
+      "technicId": 1,
+      "id": 5
+    },
+    {
+      "status": "Работает",
+      "coordinateLatitude": 59.57664028213781,
+      "coordinateLongitude": 109.66490332067123,
+      "archiveId": 2,
+      "technicId": 2,
+      "id": 6
+    },
+    {
+      "status": "Свободна",
+      "coordinateLatitude": 59.350040043535245,
+      "coordinateLongitude": 109.63839607164226,
+      "archiveId": 2,
+      "technicId": 3,
+      "id": 7
+    },
+    {
+      "status": "Работает",
+      "coordinateLatitude": 59.37815486977872,
+      "coordinateLongitude": 111.160326815923,
+      "archiveId": 2,
+      "technicId": 4,
+      "id": 8
+    },
+    {
+      "status": "Свободна",
+      "coordinateLatitude": 59.50006988362207,
+      "coordinateLongitude": 110.5290589186613,
+      "archiveId": 3,
+      "technicId": 1,
+      "id": 9
+    },
+    {
+      "status": "Свободна",
+      "coordinateLatitude": 59.436068176067266,
+      "coordinateLongitude": 110.97091968256522,
+      "archiveId": 3,
+      "technicId": 4,
+      "id": 10
+    },
+    {
+      "status": "Перегрузка",
+      "coordinateLatitude": 59.6195128073811,
+      "coordinateLongitude": 111.08242659281375,
+      "archiveId": 3,
+      "technicId": 3,
+      "id": 11
+    },
+    {
+      "status": "Перегрузка",
+      "coordinateLatitude": 59.20174435376754,
+      "coordinateLongitude": 110.41031636410465,
+      "archiveId": 3,
+      "technicId": 2,
+      "id": 12
+    },
+    {
+      "status": "Работает",
+      "coordinateLatitude": 59.148872766802455,
+      "coordinateLongitude": 108.77386341840993,
+      "archiveId": 4,
+      "technicId": 6,
+      "id": 13
+    },
+    {
+      "status": "Свободна",
+      "coordinateLatitude": 59.51924313380246,
+      "coordinateLongitude": 109.14423378540994,
+      "archiveId": 4,
+      "technicId": 7,
+      "id": 14
+    },
+    {
+      "status": "Перегрузка",
+      "coordinateLatitude": 58.638037163132275,
+      "coordinateLongitude": 110.23868588226154,
+      "archiveId": 5,
+      "technicId": 1,
+      "id": 15
+    },
+    {
+      "status": "Работает",
+      "coordinateLatitude": 59.240927486753655,
+      "coordinateLongitude": 110.84608254220805,
+      "archiveId": 5,
+      "technicId": 2,
+      "id": 16
+    },
+    {
+      "status": "Работает",
+      "coordinateLatitude": 58.894209519410246,
+      "coordinateLongitude": 109.48732068181972,
+      "archiveId": 5,
+      "technicId": 3,
+      "id": 17
+    },
+    {
+      "status": "Перегрузка",
+      "coordinateLatitude": 59.120960303199595,
+      "coordinateLongitude": 109.54779558431594,
+      "archiveId": 5,
+      "technicId": 4,
+      "id": 18
+    }
+  ]
+}

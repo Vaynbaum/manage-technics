@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="separator-name">
+    <div class="separator-name-center text">{{row?.date?.title}}</div>
+  </div>
+  <div class="date text">
+    {{row?.date?.date | date:"dd.MM.yyyy"}}
+  </div>
+
+  <div class="separator-name">
+    <div class="separator-name-center text">{{row?.report?.title}}</div>
+  </div>
+  <div class="report text" *ngFor="let report of row?.report?.reports">
+    {{report.text}}
+    <span *ngIf="report.link">
+      (<a (click)="goto(report.link, report.query)">
+        Подробнее
+      </a>)
+    </span>
+  </div>
+
+  <div class="separator-name">
+    <div class="separator-name-center text">{{row?.conclusion?.title}}</div>
+  </div>
+  <div class="conclusion text" *ngFor="let text of row?.conclusion?.conclusions">
+    {{text}}
+  </div>
+</div>

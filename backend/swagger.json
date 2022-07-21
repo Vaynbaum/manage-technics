@@ -1,0 +1,170 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "IOT API",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3001",
+  "basePath": "/",
+  "schemes": ["http"],
+  "paths": {
+    "/statuses/": {
+      "get": {
+        "description": "Get all statuses of technics",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "statuses",
+            "description": "Old array of statuses",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "style": "form",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of statuses",
+            "schema": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "/one-status/": {
+      "get": {
+        "description": "Get status of technic",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "status",
+            "description": "Old status",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Status",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/randstatus/": {
+      "get": {
+        "description": "Get initialial statuses of technics",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "count",
+            "description": "Count of technics",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of statuses",
+            "schema": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "/randcoordinates/": {
+      "get": {
+        "description": "Get initial coordinates of technics",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "count",
+            "description": "Count of technics",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of coordinates",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "coordinateLatitude": { "type": "number" },
+                  "coordinateLongitude": { "type": "number" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/coordinates/": {
+      "post": {
+        "description": "Get all coordinates of technics",
+
+        "requestBody": {
+          "in": "body",
+          "name": "coordinates",
+          "description": "Get initial coordinates of technics",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "status",
+                    "coordinateLatitude",
+                    "coordinateLongitude"
+                  ],
+                  "properties": {
+                    "status": { "type": "string" },
+                    "coordinateLatitude": { "type": "number" },
+                    "coordinateLongitude": { "type": "number" }
+                  }
+                }
+              }
+            }
+          },
+
+          "style": "form",
+          "explode": false
+        },
+        "responses": {
+          "200": {
+            "description": "Array of all coordinates",
+            "schema": { "$ref": "#/definitions/Coordinates" }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Coordinate": {
+      "coordinateLatitude": { "type": "number" },
+      "coordinateLongitude": { "type": "number" }
+    },
+    "Coordinates": [{ "$ref": "#/definitions/Coordinate" }]
+  }
+}

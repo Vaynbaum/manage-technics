@@ -1,0 +1,42 @@
+@import "../../styles.scss";
+$colorBtn: #b2116a;
+$colorBtnDisabled: #e29dc3;
+$fontSizeButton320: 14px;
+$fontSizeButton375: 16px;
+$fontSizeButton425: 18px;
+$fontSizeButton768: 20px;
+
+
+.btn {
+  color: $colorWhite;
+  padding: $paddingBtn;
+  background: $colorBtn;
+  border: none;
+  cursor: pointer;
+  border-radius: $borderRadius;
+}
+.btn[disabled] {
+  cursor: no-drop;
+  background-color: $colorBtnDisabled;
+}
+
+@media (min-width: 320px) {
+  .btn {
+    font-size: $fontSizeButton320;
+  }
+}
+
+
+@media (min-width: 375px) {
+  .btn {
+    font-size: $fontSizeButton375;
+  }
+}
+
+
+
+@media (min-width: 425px) {
+  .btn {
+    font-size: $fontSizeButton425;
+  }
+}

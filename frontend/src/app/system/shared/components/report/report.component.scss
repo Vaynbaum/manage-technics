@@ -1,0 +1,17 @@
+@import "../../../../../assets/styles/page.scss";
+@import "../../../../../styles.scss";
+@import "../../../../../assets/styles/title.scss";
+@import "../../../../../assets/styles/separator.scss";
+
+.row {
+  display: flex;
+  flex-direction: column;
+  row-gap: $gap;
+
+  .report {
+    a {
+      color: $primaryColor;
+      cursor: pointer;
+    }
+  }
+}

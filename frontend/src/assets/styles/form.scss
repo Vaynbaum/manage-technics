@@ -1,0 +1,45 @@
+@import "../../styles.scss";
+
+.form {
+  background: $colorWhite;
+  border-radius: $borderRadius;
+  padding: $padding;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: $gap;
+
+  .btn-wrapper {
+    width: 100%;
+    display: flex;
+    .btn {
+      margin: auto;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: $gap;
+  }
+}
+
+@media (min-width: 320px) {
+  .form {
+    width: 300px;
+  }
+}
+
+@media (min-width: 375px) {
+  .form {
+    width: 320px;
+  }
+}
+
+@media (min-width: 425px) {
+  .form {
+    width: 350px;
+  }
+}

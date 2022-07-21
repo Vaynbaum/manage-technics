@@ -1,0 +1,26 @@
+<div class="form">
+  <div class="title">Регистрация</div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <app-textarea
+      *ngFor="let input of inputs"
+      [type]="input.type"
+      [placeholder]="input.placeholder"
+      [formControlName]="input.field"
+      [formConrol]="form.get(input.field)"
+      [messageErorFunc]="input.messageError"
+    >
+    </app-textarea>
+
+    <div class="btn-wrapper">
+      <button [disabled]="form.invalid" class="btn">Зарегистрироваться</button>
+    </div>
+  </form>
+  <div class="login-links">
+    <p class="text-center">
+      Есть аккаунт?
+      <a class="txt-brand" routerLink="/auth/login"> Войдите! </a>
+    </p>
+  </div>
+</div>
+

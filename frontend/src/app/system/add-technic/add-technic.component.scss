@@ -1,0 +1,37 @@
+@import "../../../assets/styles/page.scss";
+@import "../../../styles.scss";
+@import "../../../assets/styles/separator.scss";
+@import "../../../assets/styles/form.scss";
+@import "../../../assets/styles/title.scss";
+@import "../../../assets/styles/button.scss";
+
+.page {
+  flex-direction: column;
+  align-items: center;
+  row-gap: $gap;
+}
+
+.form-group {
+  .separator-name-center {
+    // color: #d3d3d3;
+    font-size: 14px;
+  }
+  // .group-title {
+  //   padding-left: 16px;
+  //   border: none;
+  //   border-bottom: 1px solid #d3d3d3;
+  // }
+  .types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    img {
+      cursor: pointer;
+      width: 60px;
+      height: 60px;
+    }
+    .selectimg {
+      border: 1px solid $primaryColor;
+    }
+  }
+}

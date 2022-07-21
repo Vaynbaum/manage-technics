@@ -1,0 +1,40 @@
+@import "../../styles.scss";
+$fontSize: 14px;
+$paddindLeft: 16px;
+$sizeFontErr: 12px;
+$widthInputEl: 320px;
+$warnColorRed: red;
+
+input,
+textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: $fontSize;
+  padding-left: $paddindLeft;
+  // border-bottom: 1px solid $colorGray;
+}
+
+textarea {
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 0.7;
+}
+.has-error {
+  .form-help-text {
+    padding-left: $paddindLeft;
+    span {
+      color: $warnColorRed;
+      font-size: $sizeFontErr;
+    }
+  }
+
+  textarea,
+  input {
+    border-color: $warnColorRed !important;
+    color: $warnColorRed;
+  }
+}

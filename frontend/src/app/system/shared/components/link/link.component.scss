@@ -1,0 +1,33 @@
+@import "../../../../../styles.scss";
+$fontSizeButton:16px;
+.btn_link-hover_reverse,
+.btn_link-reverse,
+.btn_link-hover,
+.btn_link {
+  a{
+    font-size: $fontSizeButton;
+  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: $gap;
+
+  padding: $paddingBtn;
+  transition: all 300ms ease;
+  border-radius: $borderRadius;
+  cursor: pointer;
+}
+.btn_link-hover_reverse,
+.btn_link {
+  background-color: $primaryColor;
+  a {
+    color: $colorWhite;
+  }
+}
+.btn_link-reverse,
+.btn_link-hover {
+  background-color: $colorWhite;
+  a {
+    color: $primaryColor;
+  }
+}

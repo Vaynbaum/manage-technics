@@ -1,0 +1,90 @@
+@import "../../styles.scss";
+$heightBackTop320: 80px;
+$heightBackTop375: 95px;
+$heightBackTop425: 108px;
+$heightBackTop768: 190px;
+main {
+  display: flex;
+  flex-direction: column;
+  // height: 100vh;
+
+  app-header,
+  .content,
+  app-footer {
+    width: 100%;
+  }
+
+  app-header {
+    position: fixed;
+    z-index: 2;
+  }
+
+  .background-top {
+    background-image: url("../../assets/images/background-system.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .content,
+  app-footer {
+    background-image: url("../../assets/images/backgroud.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 320px) {
+  .content {
+    margin-top: calc(2 * #{$heightHeader});
+  }
+  .background-top {
+    height: $heightBackTop320;
+  }
+  .content .content-page {
+    min-height: calc(
+      100vh - #{$heightFooter} - #{$heightBackTop320} -
+        calc(2 * #{$heightHeader})
+    );
+  }
+}
+
+@media (min-width: 375px) {
+  .background-top {
+    height: $heightBackTop375;
+  }
+
+  .content .content-page {
+    min-height: calc(
+      100vh - #{$heightFooter} - #{$heightBackTop375} -
+        calc(2 * #{$heightHeader})
+    );
+  }
+}
+
+@media (min-width: 425px) {
+  .background-top {
+    height: $heightBackTop425;
+  }
+  .content .content-page {
+    min-height: calc(
+      100vh - #{$heightFooter} - #{$heightBackTop425} -
+        calc(2 * #{$heightHeader})
+    );
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    margin-top: $heightHeader;
+  }
+
+  .content .content-page {
+    min-height: calc(
+      100vh - #{$heightFooter} - #{$heightBackTop768} - #{$heightHeader}
+    );
+  }
+
+  .background-top {
+    height: $heightBackTop768;
+  }
+}

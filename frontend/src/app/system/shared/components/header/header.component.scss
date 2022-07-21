@@ -1,0 +1,61 @@
+@import "../../../../../styles.scss";
+@import "../../../../../assets/styles/dropdown.scss";
+// $sizeAccount: 30px;
+header {
+  a {
+    text-decoration: none;
+    color: $colorWhite;
+  }
+  box-shadow: 0px -8px 15px 1px black;
+
+  .block-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: $heightHeader;
+    color: $colorWhite;
+    background: $primaryColor;
+    .logo {
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  .block-bottom {
+    background: $colorWhite;
+  }
+}
+
+@media (min-width: 320px) {
+  .block-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: $heightHeader;
+  }
+  .links {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .block-bottom {
+    display: none;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // justify-content: space-between;
+    column-gap: $gap;
+    height: $heightHeader;
+  }
+}
+.dropdown {
+  top: $heightHeader;
+}

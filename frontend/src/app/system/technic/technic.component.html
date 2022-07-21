@@ -1,0 +1,26 @@
+<div class="page">
+  <div class="block">
+    <div class="title">Техника</div>
+    <div class="separator"></div>
+    <div class="row text">
+      <div class="number ">
+        <span>Номер: {{technic?.number}}</span>
+      </div>
+      <div class="status">
+        <span>Статус: {{technic?.status}}</span>
+      </div>
+      <div class="coordinates">
+        <span>Широта: {{technic?.coordinateLatitude}}</span>
+        <span>Долгота: {{technic?.coordinateLongitude}}</span>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div class="type">
+      <img [src]="joinerURL()" class="">
+    </div>
+    <div class="separator"></div>
+    <div (click)="actionTechnic()" *ngIf="enableManage && nameButton">
+      <button class="btn">{{nameButton}}</button>
+    </div>
+  </div>
+</div>

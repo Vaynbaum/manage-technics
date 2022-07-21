@@ -1,0 +1,27 @@
+<div class="form">
+  <div class="title">Авторизация</div>
+  <div class="alert-{{ message.type }}" *ngIf="message.text">
+    {{ message.text }}
+  </div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <app-textarea
+    *ngFor="let input of inputs"
+    [type]="input.type"
+    [placeholder]="input.placeholder"
+    [formControlName]="input.field"
+    [formConrol]="form.get(input.field)"
+    [messageErorFunc]="input.messageError"
+  >
+  </app-textarea>
+
+  <div class="btn-wrapper">
+    <button type="submit" [disabled]="form.invalid" class="btn">Войти</button>
+  </div>
+  </form>
+  <div class="login-links">
+    <p class="text-center">
+      Еще нет аккаунта?
+      <a class="txt-brand" routerLink="/auth/registration"> Зарегистрируйтесь! </a>
+    </p>
+  </div>
+</div>

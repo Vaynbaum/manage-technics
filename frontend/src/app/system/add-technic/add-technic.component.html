@@ -1,0 +1,28 @@
+<div class="page">
+  <div class="form">
+    <div class="title">Добавление техники</div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <div class="separator-name">
+          <div class="separator-name-center">Выбор типа техники</div>
+        </div>
+        <div class="types">
+          <ng-container *ngFor="let type of types">
+            <img [ngClass]="{selectimg:isSelect(type)}" (click)="selectType(type)" [src]="joinerURL(type)">
+          </ng-container>
+        </div>
+
+      </div>
+      <app-textarea *ngFor="let input of inputs" [type]="input.type" [placeholder]="input.placeholder"
+        [formControlName]="input.field" [formConrol]="form.get(input.field)" [messageErorFunc]="input.messageError">
+      </app-textarea>
+
+      <div class="btn-wrapper">
+        <button [disabled]="form.invalid" class="btn">Добавить</button>
+      </div>
+    </form>
+  </div>
+
+</div>

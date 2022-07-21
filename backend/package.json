@@ -1,0 +1,11 @@
+{
+  "name": "manage-techics",
+  "version": "0.0.0",
+  "scripts": {
+    "iot": "nodemon iot.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "swagger-ui-express": "^4.3.0"
+  }
+}

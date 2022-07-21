@@ -1,0 +1,34 @@
+@import "../../../../../styles.scss";
+.block {
+  color: $colorWhite;
+  background: #0000004d;
+
+  width: 100%;
+  height: $heightFooter;
+  padding: $padding;
+  display: flex;
+  flex-direction: column;
+  row-gap: 45px;
+
+  .comand {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 375px) {
+  .comand {
+    margin-left: 5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .comand {
+    margin-left: 10%;
+  }
+}

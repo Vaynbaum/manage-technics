@@ -1,0 +1,30 @@
+@import "../../styles.scss";
+
+.close .dropdown {
+  display: none;
+}
+.dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: $borderRadius;
+  background-color: $colorWhite;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    column-gap: $gap;
+    padding: $padding;
+    transition: all $secondsTransition ease;
+    cursor: pointer;
+    background: $colorWhite;
+    color: $primaryColor;
+    border-radius: $borderRadius;
+  }
+  .dropdown-item:hover {
+    color: $colorWhite;
+    background: $primaryColor;
+  }
+}
