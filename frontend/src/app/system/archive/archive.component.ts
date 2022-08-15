@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
-import { Archive } from '../shared/models/archive.model';
-import { ArchiveToTechnic } from '../shared/models/archiveToTechnics.model';
-import { cntStatuses } from '../shared/models/cntStatuses.model';
-import { ItemReport } from '../shared/models/data-report.model';
-import { ArchiveService } from '../shared/services/archive.service';
-import { CompleteReportService } from '../shared/services/complete-report.service';
+import { Archive } from "../shared/models/archive.model";
+import { ArchiveToTechnic } from "../shared/models/archiveToTechnics.model";
+import { cntStatuses } from "../shared/models/cntStatuses.model";
+import { ItemReport } from "../shared/models/data-report.model";
+import { ArchiveService } from "../shared/services/archive.service";
+import { CompleteReportService } from "../shared/services/complete-report.service";
 
 @Component({
-  selector: 'app-archive',
-  templateUrl: './archive.component.html',
-  styleUrls: ['./archive.component.scss'],
+  selector: "app-archive",
+  templateUrl: "./archive.component.html",
+  styleUrls: ["./archive.component.scss"],
 })
 export class ArchiveComponent implements OnInit {
   constructor(
@@ -20,6 +20,7 @@ export class ArchiveComponent implements OnInit {
   reportRows: ItemReport[] = [];
 
   ngOnInit(): void {
+    this.reportRows = [];
     // Получили архивы
     this.archiveService.getArchiveById().subscribe((archives) => {
       // Проходим по архивам
@@ -54,8 +55,8 @@ export class ArchiveComponent implements OnInit {
             // Коэффициент задействованных машин
             reps.push({
               text: this.completeReport.koefRun(reports),
-              link: '/system/technics',
-              query: ['Перегрузка', 'Работает'],
+              link: "/system/technics",
+              query: ["Перегрузка", "Работает"],
             });
 
             // Рекомендации
@@ -80,15 +81,15 @@ export class ArchiveComponent implements OnInit {
 
             this.reportRows.push({
               date: {
-                title: 'Дата',
+                title: "Дата",
                 date: new Date(archive.year, archive.month, archive.day),
               },
               report: {
-                title: 'Отчет',
+                title: "Отчет",
                 reports: reps,
               },
               conclusion: {
-                title: 'Рекомендации',
+                title: "Рекомендации",
                 conclusions: archive.conclusion,
               },
               archiveId: archive.id,

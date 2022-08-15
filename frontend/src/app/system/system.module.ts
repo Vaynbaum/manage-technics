@@ -13,8 +13,6 @@ import { LinkComponent } from './shared/components/link/link.component';
 import { TechnicsComponent } from './technics/technics.component';
 import { ArchiveComponent } from './archive/archive.component';
 import { ReportComponent } from './shared/components/report/report.component';
-import { CompleteReportService } from './shared/services/complete-report.service';
-import { ArchiveService } from './shared/services/archive.service';
 import { DropdownDirective } from './shared/directives/dropdown.directive';
 import { TechnicComponent } from './technic/technic.component';
 import { AddTechnicComponent } from './add-technic/add-technic.component';
@@ -40,6 +38,6 @@ import { AddTechnicComponent } from './add-technic/add-technic.component';
     SystemRoutingModule,
     SharedModule,
   ],
-  providers: [CompleteReportService, ArchiveService],
+  providers: [],
 })
 export class SystemModule {}

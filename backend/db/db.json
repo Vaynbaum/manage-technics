@@ -189,6 +189,54 @@
         }
       ],
       "id": 5
+    },
+    {
+      "year": 2022,
+      "month": 6,
+      "day": 15,
+      "userId": 1,
+      "reports": [
+        {
+          "name": "Свободна",
+          "text": "Свободных в резерве: ",
+          "link": "/system/technics"
+        },
+        {
+          "name": "Работает",
+          "text": "Машин работает на нормальных оборотах: ",
+          "link": "/system/technics"
+        },
+        {
+          "name": "Перегрузка",
+          "text": "Машин работает на предельных оборотах: ",
+          "link": "/system/technics"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "year": 2022,
+      "month": 7,
+      "day": 15,
+      "userId": 1,
+      "reports": [
+        {
+          "name": "Свободна",
+          "text": "Свободных в резерве: ",
+          "link": "/system/technics"
+        },
+        {
+          "name": "Работает",
+          "text": "Машин работает на нормальных оборотах: ",
+          "link": "/system/technics"
+        },
+        {
+          "name": "Перегрузка",
+          "text": "Машин работает на предельных оборотах: ",
+          "link": "/system/technics"
+        }
+      ],
+      "id": 7
     }
   ],
   "archiveToTechnics": [
@@ -335,6 +383,70 @@
       "archiveId": 5,
       "technicId": 4,
       "id": 18
+    },
+    {
+      "status": "Перегрузка",
+      "coordinateLatitude": 59.46692497498102,
+      "coordinateLongitude": 110.97569876742372,
+      "archiveId": 6,
+      "technicId": 2,
+      "id": 19
+    },
+    {
+      "status": "Работает",
+      "coordinateLatitude": 59.49116145859781,
+      "coordinateLongitude": 109.48917291214575,
+      "archiveId": 6,
+      "technicId": 1,
+      "id": 20
+    },
+    {
+      "status": "Работает",
+      "coordinateLatitude": 59.26865660892975,
+      "coordinateLongitude": 111.09509369645568,
+      "archiveId": 6,
+      "technicId": 3,
+      "id": 21
+    },
+    {
+      "status": "Работает",
+      "coordinateLatitude": 59.160978212761265,
+      "coordinateLongitude": 110.36113745648845,
+      "archiveId": 6,
+      "technicId": 4,
+      "id": 22
+    },
+    {
+      "status": "Перегрузка",
+      "coordinateLatitude": 59.18984903070186,
+      "coordinateLongitude": 110.98907026002117,
+      "archiveId": 7,
+      "technicId": 1,
+      "id": 23
+    },
+    {
+      "status": "Свободна",
+      "coordinateLatitude": 59.49092994038724,
+      "coordinateLongitude": 109.84068326414928,
+      "archiveId": 7,
+      "technicId": 3,
+      "id": 24
+    },
+    {
+      "status": "Работает",
+      "coordinateLatitude": 59.51980707714448,
+      "coordinateLongitude": 110.87558970645222,
+      "archiveId": 7,
+      "technicId": 2,
+      "id": 25
+    },
+    {
+      "status": "Свободна",
+      "coordinateLatitude": 59.483536897868134,
+      "coordinateLongitude": 110.00493570402762,
+      "archiveId": 7,
+      "technicId": 4,
+      "id": 26
     }
   ]
 }

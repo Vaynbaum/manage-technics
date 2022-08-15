@@ -21,7 +21,7 @@ export class ArchiveService {
 
   getArchiveById() {
     return this.http.get(
-      `${URL_ARCHIVES}?userId=${this.authService.user?.id}&_sort=id&_order=asc`
+      `${URL_ARCHIVES}?userId=${this.authService.user?.id}&_sort=year,month,day&_order=desc,desc,desc`
     );
   }
 
@@ -43,7 +43,7 @@ export class ArchiveService {
     let date = new Date();
     const archive = new Archive(
       date.getFullYear(),
-      date.getMonth() - 1,
+      date.getMonth(),
       date.getDate(),
       //@ts-ignore
       this.authService.user.id as number,

@@ -4,7 +4,6 @@ import { ArchiveToTechnic } from '../shared/models/archiveToTechnics.model';
 import { Technic } from '../shared/models/technic.model';
 import { ArchiveService } from '../shared/services/archive.service';
 import { IotService } from '../shared/services/iot.service';
-import { TechnicService } from '../shared/services/technic.service';
 
 @Component({
   selector: 'app-technics',
