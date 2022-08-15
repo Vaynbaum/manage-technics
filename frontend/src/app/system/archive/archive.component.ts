@@ -6,20 +6,7 @@ import { cntStatuses } from '../shared/models/cntStatuses.model';
 import { ItemReport } from '../shared/models/data-report.model';
 import { ArchiveService } from '../shared/services/archive.service';
 import { CompleteReportService } from '../shared/services/complete-report.service';
-// const month = [
-//   'Январь',
-//   'Февраль',
-//   'Март',
-//   'Апрель',
-//   'Май',
-//   'Июнь',
-//   'Июль',
-//   'Август',
-//   'Сентрябрь',
-//   'Октябрь',
-//   'Ноябрь',
-//   'Декабрь',
-// ];
+
 @Component({
   selector: 'app-archive',
   templateUrl: './archive.component.html',
@@ -32,25 +19,7 @@ export class ArchiveComponent implements OnInit {
   ) {}
   reportRows: ItemReport[] = [];
 
-  // //@ts-ignore
-  // chart: GoogleChart = {
-  //   type: ChartType.LineChart,
-  //   opt: {
-  //     title: 'Соотношение свободных единиц к задействованным',
-
-  //     height: 300,
-  //     hAxis: {},
-  //     vAxis: {
-  //       title: 'Коэффициент',
-  //     },
-  //   },
-  //   data: [],
-  // };
-
   ngOnInit(): void {
-    // let cntRecordChart = 0;
-    //@ts-ignore
-    // this.chart.opt.width = document.querySelector('.chart').offsetWidth - 20;
     // Получили архивы
     this.archiveService.getArchiveById().subscribe((archives) => {
       // Проходим по архивам
@@ -89,14 +58,6 @@ export class ArchiveComponent implements OnInit {
               query: ['Перегрузка', 'Работает'],
             });
 
-            // if (cntRecordChart < 30) {
-            //   this.chart.data.push([
-            //     `${archive.day}`,
-            //     this.completeReport.koefRunWithoutStr(reports),
-            //   ]);
-            //   this.chart.opt.hAxis.title = month[archive.month];
-            // }
-
             // Рекомендации
             archive.conclusion = [];
             let res = this.completeReport.reserve(archive.conclusion, reports);
@@ -134,7 +95,6 @@ export class ArchiveComponent implements OnInit {
             });
           });
       });
-      // cntRecordChart += 1;
     });
   }
 }

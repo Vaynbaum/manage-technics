@@ -34,13 +34,11 @@ import { AddTechnicComponent } from './add-technic/add-technic.component';
     DropdownDirective,
     TechnicComponent,
     AddTechnicComponent,
-    // ChartComponent,
   ],
   imports: [
     CommonModule,
     SystemRoutingModule,
     SharedModule,
-    // GoogleChartsModule
   ],
   providers: [CompleteReportService, ArchiveService],
 })

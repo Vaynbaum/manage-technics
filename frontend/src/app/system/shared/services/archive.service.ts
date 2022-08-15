@@ -1,13 +1,16 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { AuthService } from 'src/app/shared/services/auth.service';
-import { Archive } from '../models/archive.model';
-import { ArchiveToTechnic } from '../models/archiveToTechnics.model';
-import { Report } from '../models/report.model';
-import { Technic } from '../models/technic.model';
-import { IotService } from './iot.service';
-const URL_ARCHIVES = 'http://localhost:3000/archives';
-const URL_ARCHIVE_TO_TECHNICS = 'http://localhost:3000/archiveToTechnics';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { AuthService } from "src/app/shared/services/auth.service";
+import { URL_DB } from "src/app/shared/url";
+import { Archive } from "../models/archive.model";
+import { ArchiveToTechnic } from "../models/archiveToTechnics.model";
+import { Report } from "../models/report.model";
+import { Technic } from "../models/technic.model";
+import { IotService } from "./iot.service";
+
+const URL_ARCHIVES = `${URL_DB}/archives`;
+const URL_ARCHIVE_TO_TECHNICS = `${URL_DB}/archiveToTechnics`;
+
 @Injectable()
 export class ArchiveService {
   constructor(
@@ -44,19 +47,19 @@ export class ArchiveService {
       this.authService.user.id as number,
       [
         {
-          name: 'Свободна',
-          text: 'Свободных в резерве: ',
-          link: '/system/technics',
+          name: "Свободна",
+          text: "Свободных в резерве: ",
+          link: "/system/technics",
         } as Report,
         {
-          name: 'Работает',
-          text: 'Машин работает на нормальных оборотах: ',
-          link: '/system/technics',
+          name: "Работает",
+          text: "Машин работает на нормальных оборотах: ",
+          link: "/system/technics",
         } as Report,
         {
-          name: 'Перегрузка',
-          text: 'Машин работает на предельных оборотах: ',
-          link: '/system/technics',
+          name: "Перегрузка",
+          text: "Машин работает на предельных оборотах: ",
+          link: "/system/technics",
         } as Report,
       ]
     );

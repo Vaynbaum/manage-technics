@@ -1,5 +1,5 @@
 // подключение express
-const express = require("express");
+const express = require('express');
 var cors = require("cors");
 const jsonParser = express.json();
 
@@ -28,3 +28,6 @@ app.post("/coordinates", jsonParser, coordinateController.GetCoordinates);
 app.listen(3001, () => {
   console.log("🚀 Server ready");
 });
+
+// export 'app'
+module.exports = app
