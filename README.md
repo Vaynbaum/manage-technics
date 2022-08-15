@@ -6,6 +6,10 @@ The application allows you to manage construction equipment.
 
 ![background-system](https://user-images.githubusercontent.com/78900834/180208701-8b918016-af8f-40ab-921a-7c82fd865d16.png)
 
+***
+
+<h2><a  href="https://manage-technics.vercel.app/auth/login">Live Demo</a></h2>
+
 # About the app
 By creating a personal account or logging in, the client part of the solution provides an opportunity to monitor the available units of equipment during construction. The user can add equipment, which will be able to monitor and control. Save the current state of the equipment for later viewing in the archive.
 ## Front-end 
@@ -54,16 +58,13 @@ Frontend-part of the application is written using the Angular framework.
 Backend-part of the application, which simulates data from construction machinery, is written using the Express framework.
 
 # How to start
-After downloading the project, you need to install the dependencies In the folders for frontend and for backend
+After downloading the project, you need to install the dependencies.
+You need to write the command while in the frontend, backend/iot, backend/db directories
 
 >npm install
 
-To run frontend, you need to write the command
+To run, you need to write the command while in the frontend, backend/iot, backend/db directories
 
->npm run dev
-
-To run backend, you need to write the command
-
->npm run iot
+>npm run start
 
 Open your browser at http://localhost:4200/
