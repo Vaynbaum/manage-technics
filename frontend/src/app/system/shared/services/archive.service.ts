@@ -20,7 +20,9 @@ export class ArchiveService {
   ) {}
 
   getArchiveById() {
-    return this.http.get(`${URL_ARCHIVES}?userId=${this.authService.user?.id}`);
+    return this.http.get(
+      `${URL_ARCHIVES}?userId=${this.authService.user?.id}&_sort=id&_order=asc`
+    );
   }
 
   getTechnicsByArchiveId(id: number) {
