@@ -8,7 +8,7 @@ The application allows you to manage construction equipment.
 
 ***
 
-<h2><a  href="https://manage-technics.vercel.app/auth/login">Live Demo</a></h2>
+<h2><a  href="https://manage-technics-frontend.vercel.app/">Live Demo</a></h2>
 
 # About the app
 By creating a personal account or logging in, the client part of the solution provides an opportunity to monitor the available units of equipment during construction. The user can add equipment, which will be able to monitor and control. Save the current state of the equipment for later viewing in the archive.
