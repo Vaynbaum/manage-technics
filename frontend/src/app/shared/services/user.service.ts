@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from '../models/user.model';
-import { URL_DB } from '../url';
+import { URL_DB } from '../urls';
 
 const URL_USERS = `${URL_DB}/users`;
 

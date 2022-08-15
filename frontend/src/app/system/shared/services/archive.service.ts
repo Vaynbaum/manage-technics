@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { AuthService } from "src/app/shared/services/auth.service";
-import { URL_DB } from "src/app/shared/url";
+import { URL_DB } from "src/app/shared/urls";
 import { Archive } from "../models/archive.model";
 import { ArchiveToTechnic } from "../models/archiveToTechnics.model";
 import { Report } from "../models/report.model";

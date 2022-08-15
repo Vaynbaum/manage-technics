@@ -4,7 +4,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 import { map } from 'rxjs/operators';
 import { Technic } from '../models/technic.model';
 import { Observable } from 'rxjs';
-import { URL_DB } from 'src/app/shared/url';
+import { URL_DB } from 'src/app/shared/urls';
 
 const URL_TECHNICS = `${URL_DB}/technics`;
 

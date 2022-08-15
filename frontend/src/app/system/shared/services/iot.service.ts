@@ -2,13 +2,12 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { EventEmitter, Injectable, Output } from '@angular/core';
 
 import { Observable } from 'rxjs';
+import { URL_IOT } from 'src/app/shared/urls';
 import { Technic } from '../models/technic.model';
 import { TechnicService } from './technic.service';
 
-const URL_RAND_DATA_IOT = 'http://localhost:3001';
-
 const INTERVAL_UPDATE_DATA = 4000;
-const STR_NO_MOVE = 'Свободна';
+
 @Injectable()
 export class IotService {
   technics: Technic[] = [];
@@ -55,20 +54,20 @@ export class IotService {
         params = params.append('status', status);
       });
 
-      return this.http.get(`${URL_RAND_DATA_IOT}/one-status`, { params: params });
+      return this.http.get(`${URL_IOT}/one-status`, { params: params });
     } else {
       let params = new HttpParams();
       statuses.forEach((status: string) => {
         params = params.append('statuses', status);
       });
-      return this.http.get(`${URL_RAND_DATA_IOT}/statuses`, { params: params });
+      return this.http.get(`${URL_IOT}/statuses`, { params: params });
     }
   }
 
   getRandCoordinates(count: number) {
     let params = new HttpParams();
     params = params.append('count', count);
-    return this.http.get(`${URL_RAND_DATA_IOT}/randcoordinates`, { params: params });
+    return this.http.get(`${URL_IOT}/randcoordinates`, { params: params });
   }
 
   stopTechnic(id: number) {
@@ -109,14 +108,14 @@ export class IotService {
         coordinateLongitude: technic.coordinateLongitude,
       });
     });
-    return this.http.post(`${URL_RAND_DATA_IOT}/coordinates`, old_coords);
+    return this.http.post(`${URL_IOT}/coordinates`, old_coords);
   }
 
   getRandStatuses(count: number) {
     // Получаем рандомные статусы
     let params = new HttpParams();
     params = params.append('count', count);
-    return this.http.get(`${URL_RAND_DATA_IOT}/randstatus`, { params: params });
+    return this.http.get(`${URL_IOT}/randstatus`, { params: params });
   }
 
   public getTechnics() {
