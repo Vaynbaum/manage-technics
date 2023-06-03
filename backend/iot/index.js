@@ -2,7 +2,7 @@
 const express = require('express');
 var cors = require("cors");
 const jsonParser = express.json();
-
+const port = process.env.PORT || 8080;
 // подключение swagger
 const swaggerUI = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
@@ -23,11 +23,11 @@ app.get("/randstatus", statusController.RandStatus);
 
 app.get("/randcoordinates", coordinateController.GetRandCoordinates);
 app.post("/coordinates", jsonParser, coordinateController.GetCoordinates);
-
-// начинаем прослушивать подключения на 3001 порту
-app.listen(3001, () => {
-  console.log("🚀 Server ready");
+app.get("/", (req, res) => {
+  res.send("Hello from Space! 🚀");
 });
 
-// export 'app'
-module.exports = app
+
+app.listen(port, () => {
+  console.log("🚀 Server ready");
+});

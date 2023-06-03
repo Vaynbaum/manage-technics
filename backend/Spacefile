@@ -1,0 +1,20 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: db-deta
+    src: db-deta
+    engine: python3.9
+    primary: true
+    presets:
+      env:
+        - name: DETA_PK
+        - name: DETA_NAME_DB
+        - name: CORS_URL
+    public_routes:
+      - "/*"
+  - name: iot
+    src: iot
+    engine: nodejs16
+    path: iot
+    public_routes:
+      - "/*"

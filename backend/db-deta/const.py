@@ -1,0 +1,2 @@
+ERR_MSG='Error'
+OK_MSG='OK'
