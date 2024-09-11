@@ -2,11 +2,12 @@
 
 <h3><a href="https://manage-tech-frontend.vercel.app/">Live Demo</a></h3>
 
-## Test account
+### Test account
 
-`ivanov@mail.ru`
-
-`12345678`
+```
+ivanov@mail.ru
+12345678
+```
 
 This is the solution of the case of the hackathon Casein 2022
 
